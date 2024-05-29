@@ -15,7 +15,7 @@ Image.MAX_IMAGE_PIXELS = None # jarvis, disable my gigapixel inhibitors
 @click.option('-w', '--webp', is_flag=True, help='If enabled uses WebP, otherwise JPEG')
 @click.argument('infile')
 @click.argument('outfile', type=click.Path(dir_okay=False, writable=True))
-@click.version_option(version='0.1.0', prog_name="imagesizer", message="%(prog)s v%(version)s")
+@click.version_option(version='0.1.1', prog_name="imagesizer", message="%(prog)s v%(version)s")
 
 def compress(infile, size, webp, outfile):
 	"""Simple tool which shrinks an image to (roughly) the desired filesize."""
