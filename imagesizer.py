@@ -27,7 +27,8 @@ def compress(infile, size, webp, outfile):
 				if os.stat(outfile).st_size <= size*1000:
 					break
 		else:
-			for q in range(90, 10, -5):
+			for q in range(95, 10, -5):
+				img = img.convert('RGB') # make sure there's no alpha channel sneaking through
 				img.save(outfile, 'jpeg', quality=q)
 				if os.stat(outfile).st_size <= size*1000:
 					break
